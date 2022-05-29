@@ -6,10 +6,10 @@
 #SBATCH --mail-user=xl289@cornell.edu
 #SBATCH -N 1  # Total number of CPU nodes requested
 #SBATCH -n 8  # Total number of CPU cores requrested
-#SBATCH -t 96:00:00  # Run time (hh:mm:ss)
-#SBATCH --mem=55000  # CPU Memory pool for all cores
-#SBATCH --partition=gpu --gres=gpu:3090:8
+#SBATCH -t 120:00:00  # Run time (hh:mm:ss)
+#SBATCH --mem=60000  # CPU Memory pool for all cores
+#SBATCH --partition=cuvl --gres=gpu:2080ti:8 -w goodfellow
 #SBATCH --get-user-env
 
 
-bash run.sh artcifar-0528
+bash run.sh artcifar-0529
