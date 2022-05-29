@@ -485,7 +485,7 @@ class AutoEncoder(nn.Module):
     def decoder_output(self, logits):
         if self.dataset in {'mnist', 'omniglot'}:
             return Bernoulli(logits=logits)
-        elif self.dataset in {'stacked_mnist', 'cifar10', 'celeba_64', 'celeba_256', 'imagenet_32', 'imagenet_64', 'ffhq',
+        elif self.dataset in {'stacked_mnist', 'cifar10', 'artcifar10', 'celeba_64', 'celeba_256', 'imagenet_32', 'imagenet_64', 'ffhq',
                               'lsun_bedroom_128', 'lsun_bedroom_256', 'lsun_church_64', 'lsun_church_128'}:
             if self.num_mix_output == 1:
                 return NormalDecoder(logits, num_bits=self.num_bits)

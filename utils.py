@@ -300,7 +300,7 @@ def one_hot(indices, depth, dim):
 def num_output(dataset):
     if dataset in {'mnist', 'omniglot'}:
         return 28 * 28
-    elif dataset == 'cifar10':
+    elif dataset in {'cifar10', 'artcifar10'}:
         return 3 * 32 * 32
     elif dataset.startswith('celeba') or dataset.startswith('imagenet') or dataset.startswith('lsun'):
         size = int(dataset.split('_')[-1])
@@ -314,7 +314,7 @@ def num_output(dataset):
 def get_input_size(dataset):
     if dataset in {'mnist', 'omniglot'}:
         return 32
-    elif dataset == 'cifar10':
+    elif dataset in {'cifar10', 'artcifar10'}:
         return 32
     elif dataset.startswith('celeba') or dataset.startswith('imagenet') or dataset.startswith('lsun'):
         size = int(dataset.split('_')[-1])

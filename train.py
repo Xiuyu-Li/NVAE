@@ -338,7 +338,7 @@ if __name__ == '__main__':
                         help='id used for storing intermediate results')
     # data
     parser.add_argument('--dataset', type=str, default='mnist',
-                        choices=['cifar10', 'mnist', 'omniglot', 'celeba_64', 'celeba_256',
+                        choices=['cifar10', 'artcifar10', 'mnist', 'omniglot', 'celeba_64', 'celeba_256',
                                  'imagenet_32', 'ffhq', 'lsun_bedroom_128', 'stacked_mnist',
                                  'lsun_church_128', 'lsun_church_64'],
                         help='which dataset to use')
